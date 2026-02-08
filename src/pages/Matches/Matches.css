@@ -1,0 +1,17 @@
+.matches-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: calc(100vh - 80px);
+}
+
+.matches-page h1 {
+  color: #1e3a8a;
+  margin: 0 0 20px 0;
+  font-size: 36px;
+}
+
+.matches-page p {
+  color: #6b7280;
+  font-size: 16px;
+}

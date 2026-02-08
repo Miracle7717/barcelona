@@ -1,0 +1,134 @@
+.header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #dc2626 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease;
+}
+
+.logo h1:hover {
+  transform: scale(1.05);
+}
+
+.logo-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-right: 12px;
+  transition: transform 0.25s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.06);
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 12px;
+  width: 0;
+  height: 2px;
+  background-color: #fbbf24;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: calc(100% - 24px);
+}
+
+/* Адаптивный дизайн для мобильных */
+@media (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 15px 20px;
+  }
+
+  .logo h1 {
+    font-size: 24px;
+  }
+
+  .nav-list {
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  .nav-link {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logo h1 {
+    font-size: 20px;
+  }
+
+  .nav-list {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-link {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
