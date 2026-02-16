@@ -6,11 +6,11 @@ const initialState = {
   error: null,
 };
 
-const playersSlice = createSlice({
-  name: 'players',
+const standingsSlice = createSlice({
+  name: 'standings',
   initialState,
   reducers: {
-    setPlayers: (state, action) => {
+    setStandings: (state, action) => {
       state.list = action.payload;
       state.loading = false;
     },
@@ -24,5 +24,5 @@ const playersSlice = createSlice({
   },
 });
 
-export const { setPlayers, setLoading, setError } = playersSlice.actions;
-export default playersSlice.reducer;
+export const { setStandings, setLoading, setError } = standingsSlice.actions;
+export default standingsSlice.reducer;
