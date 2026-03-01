@@ -164,13 +164,46 @@ export const fetchStandings = async () => {
   return standingsData;
 };
 
+// Players data
+export let playersData = [
+  { id: 1, name: 'Robert Lewandowski', club: 'Barcelona', position: 'Forward', number: 9, photo: 'https://via.placeholder.com/150?text=Lewandowski' },
+  { id: 2, name: 'Pedri', club: 'Barcelona', position: 'Midfielder', number: 8, photo: 'https://via.placeholder.com/150?text=Pedri' },
+  { id: 3, name: 'Marc-André ter Stegen', club: 'Barcelona', position: 'Goalkeeper', number: 1, photo: 'https://via.placeholder.com/150?text=Stegen' },
+  { id: 4, name: 'Jules Koundé', club: 'Barcelona', position: 'Defender', number: 23, photo: 'https://via.placeholder.com/150?text=Kounde' },
+  { id: 5, name: 'Gavi', club: 'Barcelona', position: 'Midfielder', number: 6, photo: 'https://via.placeholder.com/150?text=Gavi' },
+];
+
 export const fetchPlayers = async () => {
   await simulateDelay(1100);
-  return [
-    { id: 1, name: 'Robert Lewandowski', club: 'Barcelona', position: 'Forward', number: 9 },
-    { id: 2, name: 'Pedri', club: 'Barcelona', position: 'Midfielder', number: 8 },
-    { id: 3, name: 'Marc-André ter Stegen', club: 'Barcelona', position: 'Goalkeeper', number: 1 },
-    { id: 4, name: 'Jules Koundé', club: 'Barcelona', position: 'Defender', number: 23 },
-    { id: 5, name: 'Gavi', club: 'Barcelona', position: 'Midfielder', number: 6 },
-  ];
+  return playersData.map(p => ({ ...p }));
+};
+
+export const createPlayer = async (player) => {
+  await simulateDelay(800);
+  const newPlayer = {
+    ...player,
+    id: Math.max(...playersData.map(p => p.id), 0) + 1
+  };
+  playersData.push(newPlayer);
+  return newPlayer;
+};
+
+export const updatePlayer = async (id, updatedPlayer) => {
+  await simulateDelay(800);
+  const index = playersData.findIndex(p => p.id === id);
+  if (index !== -1) {
+    playersData[index] = { ...playersData[index], ...updatedPlayer, id };
+    return playersData[index];
+  }
+  throw new Error('Player not found');
+};
+
+export const deletePlayer = async (id) => {
+  await simulateDelay(800);
+  const index = playersData.findIndex(p => p.id === id);
+  if (index !== -1) {
+    playersData.splice(index, 1);
+    return id;
+  }
+  throw new Error('Player not found');
 };

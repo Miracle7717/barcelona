@@ -9,7 +9,6 @@ function NewsList() {
   const { news, selectedNews, loading } = useSelector((state) => state.news);
   const [showDetail, setShowDetail] = useState(false);
 
-  // Fetch news list
   useEffect(() => {
     const loadNews = async () => {
       try {
@@ -24,7 +23,6 @@ function NewsList() {
     loadNews();
   }, [dispatch]);
 
-  // Handler for selecting news item
   const handleSelectNews = async (newsId) => {
     try {
       dispatch(setLoading(true));
@@ -36,13 +34,11 @@ function NewsList() {
     }
   };
 
-  // Handler for going back to list
   const handleBackToList = () => {
     setShowDetail(false);
     dispatch(setSelectedNews(null));
   };
 
-  // Loading state
   if (loading && news.length === 0) {
     return (
       <section className="news-section">
@@ -57,7 +53,6 @@ function NewsList() {
     );
   }
 
-  // Detail view
   if (showDetail && selectedNews) {
     return (
       <section className="news-section">
@@ -81,7 +76,6 @@ function NewsList() {
     );
   }
 
-  // List view
   return (
     <section className="news-section">
       <div className="section-container">

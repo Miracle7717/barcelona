@@ -26,7 +26,7 @@ function MatchesList() {
     return (
       <section className="matches-section">
         <div className="section-container">
-          <h2>⚽ Матчи</h2>
+          <h2>Матчи</h2>
           <div className="loading">
             <p>Загрузка матчей...</p>
             <div className="spinner"></div>
@@ -39,7 +39,7 @@ function MatchesList() {
   return (
     <section className="matches-section">
       <div className="section-container">
-        <h2>⚽ Матчи</h2>
+        <h2> Матчи</h2>
         <div className="matches-list">
           {list.map((match) => (
             <div key={match.id} className={`match-card ${match.status}`}>
