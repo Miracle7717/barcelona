@@ -3,6 +3,8 @@ import playersReducer from './playersSlice';
 import newsReducer from './newsSlice';
 import matchesReducer from './matchesSlice';
 import standingsReducer from './standingsSlice';
+import authReducer from './authSlice';
+import authMiddleware from './authMiddleware';
 
 export const store = configureStore({
   reducer: {
@@ -10,5 +12,8 @@ export const store = configureStore({
     news: newsReducer,
     matches: matchesReducer,
     standings: standingsReducer,
+    auth: authReducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(authMiddleware),
 });

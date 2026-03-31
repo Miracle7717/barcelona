@@ -31,7 +31,7 @@ function Home() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1>Добро пожаловать в FC Barcelona</h1>
+          <h1>Добро пожаловать в FCBarcelona</h1>
           <p>Лучший футбольный клуб мира!</p>
           <button className="hero-btn">Узнать больше</button>
         </div>

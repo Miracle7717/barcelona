@@ -88,6 +88,50 @@
   width: calc(100% - 24px);
 }
 
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.auth-buttons a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.auth-buttons a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.auth-buttons button {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.auth-buttons button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.auth-buttons span {
+  color: white;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
 /* Адаптивный дизайн для мобильных */
 @media (max-width: 768px) {
   .header-container {
