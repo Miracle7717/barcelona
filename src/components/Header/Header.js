@@ -38,6 +38,9 @@ function Header() {
             <li className="nav-item">
               <Link to="/contact" className="nav-link">Контакты</Link>
             </li>
+            <li className="nav-item">
+              <Link to="/todo" className="nav-link">Todo</Link>
+            </li>
           </ul>
         </nav>
         <div className="auth-buttons">

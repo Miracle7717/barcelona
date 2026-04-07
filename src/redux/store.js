@@ -4,6 +4,7 @@ import newsReducer from './newsSlice';
 import matchesReducer from './matchesSlice';
 import standingsReducer from './standingsSlice';
 import authReducer from './authSlice';
+import todoReducer from './todoSlice';
 import authMiddleware from './authMiddleware';
 
 export const store = configureStore({
@@ -13,6 +14,7 @@ export const store = configureStore({
     matches: matchesReducer,
     standings: standingsReducer,
     auth: authReducer,
+    todos: todoReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(authMiddleware),

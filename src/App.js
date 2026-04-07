@@ -11,6 +11,8 @@ import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
+import Todo from './pages/Todo/Todo';
+import TodoDetailPage from './pages/Todo/TodoDetailPage';
 import './styles/global.css';
 import './App.css';
 
@@ -34,6 +36,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/todo" element={<Todo />} />
+          <Route path="/todo/:id" element={<TodoDetailPage />} />
         </Routes>
       </div>
     </BrowserRouter>
