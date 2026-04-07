@@ -33,6 +33,9 @@ function Header() {
               <Link to="/standings" className="nav-link">Таблица</Link>
             </li>
             <li className="nav-item">
+              <Link to="/news" className="nav-link">Новости</Link>
+            </li>
+            <li className="nav-item">
               <Link to="/about" className="nav-link">О нас</Link>
             </li>
             <li className="nav-item">

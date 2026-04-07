@@ -1,11 +1,11 @@
 import React from 'react';
+import MatchesList from '../../components/MatchesList/MatchesList';
 import './Matches.css';
 
 function Matches() {
   return (
     <div className="matches-page">
-      <h1>Матчи</h1>
-      <p>Расписание и результаты матчей (разработка)</p>
+      <MatchesList />
     </div>
   );
 }

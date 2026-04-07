@@ -7,6 +7,7 @@ import Home from './pages/Home/Home';
 import Players from './pages/Players/Players';
 import Matches from './pages/Matches/Matches';
 import Standings from './pages/Standings/Standings';
+import News from './pages/News/News';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Login from './pages/Login/Login';
@@ -32,6 +33,7 @@ function App() {
           <Route path="/players" element={<Players />} />
           <Route path="/matches" element={<Matches />} />
           <Route path="/standings" element={<Standings />} />
+          <Route path="/news" element={<News />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />

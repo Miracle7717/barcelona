@@ -1,11 +1,11 @@
 import React from 'react';
+import StandingsList from '../../components/StandingsList/StandingsList';
 import './Standings.css';
 
 function Standings() {
   return (
     <div className="standings-page">
-      <h1>Таблица</h1>
-      <p>Таблица турнира (разработка)</p>
+      <StandingsList />
     </div>
   );
 }
